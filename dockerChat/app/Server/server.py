@@ -2,12 +2,13 @@ import threading
 import socket
 
 clients = []
-
+HOST = ''
+PORT = 80
 def main():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     try:
-        server.bind(('0.0.0.0', 7777))
+        server.bind(( HOST, PORT))
         server.listen()
 
     except:
